@@ -34,7 +34,7 @@ public class CameraRotate : MonoBehaviour
             pc.SwitchEvents();
         }
 
-        if (i > numbers.Length-1)
+        if (i > numbers.Length - 1)
             i = 0;
         else if (i < 0)
             i = numbers.Length - 1;
