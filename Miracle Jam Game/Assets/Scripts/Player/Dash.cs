@@ -38,7 +38,10 @@ public class Dash : MonoBehaviour
     {
         Collider[] cols = Physics.OverlapSphere(transform.position, radius, destructionLayer);
         foreach (Collider col in cols)
+        {
             Destroy(col.gameObject);
+            canDash = false;
+        }
     }
 
     private void OnDrawGizmos()
