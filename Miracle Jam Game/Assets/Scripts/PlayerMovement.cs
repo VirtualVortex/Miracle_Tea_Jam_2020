@@ -6,27 +6,45 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
 
-    Rigidbody rb;
+    [HideInInspector]
+    public Vector3 move;
+    [HideInInspector]
+    public Rigidbody rb;
+
+    Camera cam;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        cam = Camera.main;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        Movement();
+        Movement(Vector3.zero);
     }
 
-    void Movement()
+    public void Movement(Vector3 externalValue)
     {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        Vector3 move = transform.right * x + transform.forward * z;
-        move *= speed;
-        move.y = rb.velocity.y;
-        rb.velocity = move;
+
+        Rotate();
+        if (Mathf.RoundToInt(x) != 0f || Mathf.RoundToInt(z) != 0f)
+        {
+            move = (cam.transform.right * x + cam.transform.forward * z) + externalValue;
+            move *= speed;
+            move.y = rb.velocity.y;
+
+            rb.velocity = move;
+        }
+    }
+
+    void Rotate()
+    {
+        float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0,angle,0);
     }
 }
