@@ -1,11 +1,14 @@
 fileFormatVersion: 2
-guid: 4882cd9424db85f4fa7af39cb18d04a3
+guid: 6c6c75a993f4b014595072246f49df05
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Running
+    second: Jog Backward (1)
+  - first:
+      74: -5806782177021303904
+    second: Jog Backward
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -26,7 +29,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -35,11 +38,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Running
+      name: Jog Backward
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 49
+      lastFrame: 47
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -53,7 +56,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -922,11 +925,12 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 4882cd9424db85f4fa7af39cb18d04a3,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
