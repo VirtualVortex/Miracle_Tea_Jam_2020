@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Rotate();
-        if (Mathf.RoundToInt(x) != 0f || Mathf.RoundToInt(z) != 0f)
+        if (x != 0f || z != 0f)
         {
             move = (cam.transform.right * x + cam.transform.forward * z) + externalValue;
             move *= speed;
