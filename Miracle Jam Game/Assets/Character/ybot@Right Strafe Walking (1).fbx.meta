@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 083571350a0a20542b59e861e328dfc2
+guid: 3da4c7428adc00a4987519b158f7b615
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: -203655887218126122
+    second: Right Strafe Walking (1)
+  - first:
+      74: 5926794615508136373
     second: Right Strafe Walking
   externalObjects: {}
   materials:
