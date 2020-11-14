@@ -29,11 +29,11 @@ public class CameraRotate : MonoBehaviour
         else if (i < 0)
             i = numbers.Length - 1;
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, numbers[i], 0), speed);
+        
     }
 
     void Rotate()
     {
-
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, numbers[i], 0), speed);
     }
 }
