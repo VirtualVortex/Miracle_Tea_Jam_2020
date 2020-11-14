@@ -8,7 +8,7 @@ public class PlatformController : MonoBehaviour
     public UnityEvent firstEvent;
     public UnityEvent secondtEvent;
 
-    float timer, i;
+    float timer, i, state;
     bool onButton;
 
     private void Start() => i = 1;
@@ -16,13 +16,21 @@ public class PlatformController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (i == 1)
+        Debug.Log(i);
+
+        if (state == 1)
+        {
             InvokeFirstEvent();
-        else if (i == 2)
+            i = 1;
+        }
+        else if (state == 2)
+        {
             InvokeSecondEvent();
+            i = 2;
+        }
     }
 
-    public void SwitchEvents() => i = i == 1 ? 2 : 1;
+    public void SwitchEvents() => state = i == 2 ? 1 : 2;
 
     public void InvokeFirstEvent() => firstEvent.Invoke();
     public void InvokeSecondEvent() => secondtEvent.Invoke();
