@@ -7,12 +7,6 @@ public class ScenTransition : MonoBehaviour
 {
     [SerializeField]
     string scene;
-    [SerializeField]
-    Animator anim;
-    [SerializeField]
-    string animation;
-
-    public void PlayAnimation() => anim.Play(animation);
 
     public void SwitchScene() => SceneManager.LoadScene(scene);
 
