@@ -25,7 +25,7 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > timer) StartCoroutine(Addvelocity());
+        if (Input.GetKeyDown(KeyCode.E) && Time.time > timer) StartCoroutine(Addvelocity());
 
         if (canDash)
         {
