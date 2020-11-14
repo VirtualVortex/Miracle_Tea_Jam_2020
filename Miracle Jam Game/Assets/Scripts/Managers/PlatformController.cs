@@ -10,9 +10,7 @@ public class PlatformController : MonoBehaviour
 
     float timer, i, state;
     bool onButton;
-
-    private void Start() => i = 1;
-
+    
     // Update is called once per frame
     void Update()
     {
