@@ -47,4 +47,16 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0,angle,0);
     }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.tag.Contains("Platform"))
+            transform.parent = other.transform;
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.transform.tag.Contains("Platform"))
+            transform.parent = null;
+    }
 }
