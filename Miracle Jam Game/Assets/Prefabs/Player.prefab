@@ -4864,6 +4864,7 @@ GameObject:
   - component: {fileID: 1008745862328216793}
   - component: {fileID: 1008745862328216790}
   - component: {fileID: 1008745862328216789}
+  - component: {fileID: 1989385088396213805}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -5024,6 +5025,19 @@ MonoBehaviour:
   destructionLayer:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &1989385088396213805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008745862328216798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd16b128b852964680ff490511d9053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkPoint: {fileID: 0}
 --- !u!114 &4273966474560859057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5063,6 +5077,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FilterTracedShadow
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697153244467758135, guid: 633092cd2d21b1245b7106ebb96e3b2a,
+        type: 3}
+      propertyPath: m_NumRayTracingSamples
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697153244467758135, guid: 633092cd2d21b1245b7106ebb96e3b2a,
+        type: 3}
+      propertyPath: m_FilterSizeTraced
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7880016653656189407, guid: 633092cd2d21b1245b7106ebb96e3b2a,
         type: 3}

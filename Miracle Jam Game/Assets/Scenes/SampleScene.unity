@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.25618857, g: 0.3174317, b: 0.42013627, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1666,26 +1666,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697153244628765883, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
-        type: 3}
-      propertyPath: m_UseRayTracedShadows
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697153244628765883, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
-        type: 3}
-      propertyPath: m_FilterSizeTraced
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697153244628765883, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
-        type: 3}
-      propertyPath: m_NumRayTracingSamples
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697153244628765884, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70, type: 3}
