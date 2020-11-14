@@ -27,7 +27,11 @@ public class Dash : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && Time.time > timer) StartCoroutine(Addvelocity());
 
-        if (canDash) DestroyObjects();
+        if (canDash)
+        {
+            DestroyObjects();
+            pm.Movement((transform.forward * dashSpeed));
+        }
     }
 
     void DestroyObjects()
@@ -44,7 +48,6 @@ public class Dash : MonoBehaviour
 
     IEnumerator Addvelocity()
     {
-        pm.Movement((rb.velocity * dashSpeed));
         canDash = true;
         yield return new WaitForSeconds(dashTime);
         rb.velocity = Vector3.zero;
