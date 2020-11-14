@@ -28,6 +28,11 @@ public class TriggerButton : MonoBehaviour
     {
         if(collision.transform.tag.Contains(tag))
             InvokeEvent();
+    }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.tag.Contains(tag))
+            InvokeEvent();
     }
 }
