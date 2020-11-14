@@ -44,7 +44,7 @@ public class Dash : MonoBehaviour
 
     IEnumerator Addvelocity()
     {
-        pm.Movement((transform.forward * dashSpeed));
+        pm.Movement((rb.velocity * dashSpeed));
         canDash = true;
         yield return new WaitForSeconds(dashTime);
         rb.velocity = Vector3.zero;
