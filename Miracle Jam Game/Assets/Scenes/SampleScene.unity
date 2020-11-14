@@ -1415,6 +1415,11 @@ PrefabInstance:
       propertyPath: dashTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1008745862328216789, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
+        type: 3}
+      propertyPath: coolDown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1008745862328216794, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
         type: 3}
       propertyPath: m_LocalPosition.x
