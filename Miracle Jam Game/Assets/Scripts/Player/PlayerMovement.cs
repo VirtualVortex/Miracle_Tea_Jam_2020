@@ -12,17 +12,20 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
 
     Camera cam;
+    Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         cam = Camera.main;
+        anim = GetComponentInChildren<Animator>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
+        
         Movement(Vector3.zero);
     }
 
@@ -30,22 +33,23 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+        
+        move = (cam.transform.right * x + cam.transform.forward * z) + externalValue;
+        move *= speed;
+        move.y = rb.velocity.y;
 
-        Rotate();
+        Rotate(x);
         if (x != 0f || z != 0f)
         {
-            move = (cam.transform.right * x + cam.transform.forward * z) + externalValue;
-            move *= speed;
-            move.y = rb.velocity.y;
-
+            anim.SetFloat("MoveX", z);
             rb.velocity = move;
         }
     }
 
-    void Rotate()
+    void Rotate(float x)
     {
         float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0,angle,0);
+        transform.localRotation = Quaternion.Euler(0, angle, 0);
     }
     
     private void OnCollisionEnter(Collision other)
