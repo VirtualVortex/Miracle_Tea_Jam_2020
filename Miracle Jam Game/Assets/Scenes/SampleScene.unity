@@ -981,6 +981,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 854570917244852475}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1212033681 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 854570916555486600, guid: 6830fffa8739e6b4c9e62e144e3f1d73,
+    type: 3}
+  m_PrefabInstance: {fileID: 854570917244852475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1212033682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2000,6 +2006,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1008745862328216792, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1212033681}
     - target: {fileID: 1008745862328216794, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2059,6 +2070,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273966474560859057, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354556080083336169, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70, type: 3}
@@ -2677,6 +2698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Scene transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827792116977333830, guid: bc1fe3779939b0d429e423e4f981ae94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8827792116977333831, guid: bc1fe3779939b0d429e423e4f981ae94,
         type: 3}

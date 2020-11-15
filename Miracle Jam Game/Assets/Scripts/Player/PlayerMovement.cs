@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         cam = Camera.main;
         anim = GetComponentInChildren<Animator>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -33,12 +33,13 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        move = (cam.transform.right * x + cam.transform.forward * z) + externalValue;
+        move *= speed;
+        move.y = rb.velocity.y;
+
         Rotate();
         if (x != 0f || z != 0f)
         {
-            move = (cam.transform.right * x + cam.transform.forward * z) + externalValue;
-            move *= speed;
-            move.y = rb.velocity.y;
             anim.SetFloat("MoveX", z);
             rb.velocity = move;
         }
@@ -47,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     void Rotate()
     {
         float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0,angle,0);
+        transform.localRotation = Quaternion.Euler(0,angle,0);
     }
     
     private void OnCollisionEnter(Collision other)
