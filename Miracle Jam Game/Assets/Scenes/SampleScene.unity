@@ -2011,6 +2011,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1212033681}
+    - target: {fileID: 1008745862328216792, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1008745862328216794, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2070,6 +2075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008745862328216798, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4273966474560859057, guid: f9b8cf6f67bf0ff49a5bdfa0030a6a70,
         type: 3}
