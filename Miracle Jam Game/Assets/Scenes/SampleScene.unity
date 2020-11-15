@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 142235293}
   - component: {fileID: 142235288}
   m_Layer: 0
-  m_Name: Flowchart
+  m_Name: Stranger 1 Flowchart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
