@@ -13,7 +13,7 @@ public class Pausemenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        pausemenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,12 +23,10 @@ public class Pausemenu : MonoBehaviour
         {
             pausemenu.SetActive(true);
             isOpen = true;
+            Time.timeScale = 0;
         }
-        else if(Input.GetKeyDown(KeyCode.Escape) && isOpen)
-        {
-            pausemenu.SetActive(false);
-            isOpen = false;
-        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isOpen)
+            Resume();
     }
 
     public void Quit()
@@ -40,6 +38,7 @@ public class Pausemenu : MonoBehaviour
     {
         pausemenu.SetActive(false);
         isOpen = false;
+        Time.timeScale = 1;
     }
 
     public void MainMenu()
