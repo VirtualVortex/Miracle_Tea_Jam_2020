@@ -21,9 +21,18 @@ public class Jump : MonoBehaviour
         ray = new Ray(transform.position, -transform.up);
         RaycastHit hit;
 
+
+
         if (Physics.Raycast(ray, out hit))
-            if (Input.GetKeyDown(KeyCode.Space) && hit.distance < 0.6f)
+        {
+            Debug.Log(hit.distance);
+
+            if (Input.GetKeyDown(KeyCode.Space) && hit.distance < 1.1f)
+            {
+                transform.parent = null;
                 rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
+            }
+        }
 
 
 

@@ -55,12 +55,18 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (other.transform.tag.Contains("Platform"))
+        {
             transform.parent = other.transform;
+            //transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     private void OnCollisionExit(Collision other)
     {
         if (other.transform.tag.Contains("Platform"))
+        {
             transform.parent = null;
+            transform.localScale = new Vector3(1,1,1);
+        }
     }
 }
