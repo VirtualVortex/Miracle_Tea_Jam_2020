@@ -12,12 +12,14 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
 
     Camera cam;
+    Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         cam = Camera.main;
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -37,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
             move = (cam.transform.right * x + cam.transform.forward * z) + externalValue;
             move *= speed;
             move.y = rb.velocity.y;
-
+            anim.SetFloat("MoveX", z);
             rb.velocity = move;
         }
     }
