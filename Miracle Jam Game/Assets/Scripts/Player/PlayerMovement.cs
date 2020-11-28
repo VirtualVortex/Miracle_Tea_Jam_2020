@@ -41,18 +41,16 @@ public class PlayerMovement : MonoBehaviour
         move.y = rb.velocity.y;
 
         Rotate(x);
+
+        //Player's movement
         if (x != 0f || z != 0f)
         {
             anim.SetFloat("MoveX", z);
             rb.velocity = move;
         }
-        /*else
-        {
-           if(jump.onGround)
-                rb.velocity = Vector3.zero;
-        }*/
     }
 
+    //rotate player based on direction
     void Rotate(float x)
     {
         float angle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
@@ -61,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
+        //Attach player to platform
         if (other.transform.tag.Contains("Platform"))
         {
             transform.parent = other.transform;
@@ -70,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionExit(Collision other)
     {
+        //Dettach player to platform
         if (other.transform.tag.Contains("Platform"))
         {
             transform.parent = null;

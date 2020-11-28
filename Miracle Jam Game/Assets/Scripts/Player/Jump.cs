@@ -29,6 +29,7 @@ public class Jump : MonoBehaviour
         {
             Debug.Log(hit.distance);
 
+            //Apply upward force
             if (Input.GetKeyDown(KeyCode.Space) && hit.distance < 1.1f)
             {
                 transform.parent = null;

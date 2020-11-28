@@ -23,6 +23,7 @@ public class CameraRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Call method with different keys
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             i++;
@@ -42,5 +43,6 @@ public class CameraRotate : MonoBehaviour
         Rotate();
     }
 
+    //Rotate camera
     public void Rotate() => transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, numbers[i], 0), speed);
 }
