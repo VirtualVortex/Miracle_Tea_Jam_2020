@@ -62,8 +62,7 @@ public class PlayerMovement : MonoBehaviour
         //Attach player to platform
         if (other.transform.tag.Contains("Platform"))
         {
-            transform.parent = other.transform;
-            //transform.localScale = new Vector3(1, 1, 1);
+            transform.SetParent(other.transform, true);
         }
     }
 
