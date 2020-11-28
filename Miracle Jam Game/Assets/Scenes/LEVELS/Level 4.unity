@@ -11179,6 +11179,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &830771422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2272436833434460157, guid: 1a6b539f76b716146bc96fa8d68bcad0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1726251836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &882418681
 GameObject:
   m_ObjectHideFlags: 0
@@ -17312,6 +17318,7 @@ GameObject:
   - component: {fileID: 1326623709}
   - component: {fileID: 1326623708}
   - component: {fileID: 1326623713}
+  - component: {fileID: 1326623714}
   m_Layer: 0
   m_Name: Flowchart (1)
   m_TagString: Untagged
@@ -17384,7 +17391,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67
     y: 70
-    width: 77
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -17394,6 +17401,7 @@ MonoBehaviour:
   eventHandler: {fileID: 1326623708}
   commandList:
   - {fileID: 1326623709}
+  - {fileID: 1326623714}
   suppressAllAutoSelections: 0
 --- !u!114 &1326623711
 MonoBehaviour:
@@ -17422,7 +17430,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1326623710}
   selectedCommands:
-  - {fileID: 1326623709}
+  - {fileID: 1326623714}
   variables: []
   description: 
   stepPause: 0
@@ -17462,6 +17470,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1326623714
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326623707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  targetObject: {fileID: 830771422}
+  methodName: SwitchScene
+  delay: 0
 --- !u!1001 &1327998666
 PrefabInstance:
   m_ObjectHideFlags: 0
