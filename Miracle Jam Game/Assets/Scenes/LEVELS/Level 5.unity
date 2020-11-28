@@ -6543,7 +6543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: 39a0424d321bc244a9bf8f10ed297a02, type: 2}
   m_StaticLightingSkyUniqueID: 1
-  m_SkySettings: {fileID: 1933010711}
+  m_SkySettings: {fileID: 1944598686}
   m_SkySettingsFromProfile: {fileID: -549272302890825866, guid: 39a0424d321bc244a9bf8f10ed297a02,
     type: 2}
 --- !u!4 &657714795
@@ -7655,7 +7655,7 @@ Transform:
   m_GameObject: {fileID: 725649015}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 24, y: -29.2, z: 1066.2}
-  m_LocalScale: {x: 113.74414, y: 1, z: 19.546116}
+  m_LocalScale: {x: 48.785156, y: 1, z: 19.546116}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
@@ -10597,7 +10597,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh97170
+  m_Name: pb_Mesh173548
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16838,7 +16838,7 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &1933010711
+--- !u!114 &1944598686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
