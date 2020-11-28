@@ -59,7 +59,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Moving2 Reversed
-  m_Speed: 1
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8311088089780826383}
@@ -130,7 +130,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Moving2
-  m_Speed: 1
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 85340436592680217}
@@ -143,7 +143,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: abffc591355d6604a9577cf1ce8fdc39, type: 2}
+  m_Motion: {fileID: 7400000, guid: 47bf5f72e7f43024282dad26c76c37d9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
