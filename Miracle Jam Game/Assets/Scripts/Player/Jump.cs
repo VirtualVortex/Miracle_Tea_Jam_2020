@@ -9,6 +9,10 @@ public class Jump : MonoBehaviour
     Rigidbody rb;
     Ray ray;
 
+    [HideInInspector]
+    public bool onGround;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +24,7 @@ public class Jump : MonoBehaviour
     {
         ray = new Ray(transform.position, -transform.up);
         RaycastHit hit;
-
-
-
+        
         if (Physics.Raycast(ray, out hit))
         {
             Debug.Log(hit.distance);
@@ -31,10 +33,11 @@ public class Jump : MonoBehaviour
             {
                 transform.parent = null;
                 rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
+                onGround = false;
             }
+
+            if (hit.distance < 1.1f)
+                onGround = true;
         }
-
-
-
     }
 }

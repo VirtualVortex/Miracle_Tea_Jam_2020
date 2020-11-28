@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     Camera cam;
     Animator anim;
+    Jump jump;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         cam = Camera.main;
         anim = GetComponentInChildren<Animator>();
+        jump = GetComponent<Jump>();
     }
     
     // Update is called once per frame
@@ -44,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
             anim.SetFloat("MoveX", z);
             rb.velocity = move;
         }
+        /*else
+        {
+           if(jump.onGround)
+                rb.velocity = Vector3.zero;
+        }*/
     }
 
     void Rotate(float x)
